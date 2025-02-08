@@ -6,6 +6,10 @@ const tasks = require("../docs/tasks.js");
 //CREATE TASK
 router.post("/create", async(req, res) => {
     try {
+        if (!req.body.title) {
+            return res.status(400).json({ message: "Title is required" });
+        }
+        
         const task = await Task.create({...req.body, completed: false });
         res
         .status(201)
