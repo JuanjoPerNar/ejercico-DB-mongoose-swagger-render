@@ -6,7 +6,7 @@ module.exports = {
         post: {
           tags: ["Tasks"],
           summary: "Create a task",
-          description: "Creates a new task with a title and sets 'completed' to false by default.",
+          description: "Creates a new task with a title and sets completed to false by default.",
           operationId: "createTask",
           parameters: [],
           requestBody: {
@@ -62,7 +62,7 @@ module.exports = {
         put: {
           tags: ["Tasks"],
           summary: "Update a task title",
-          description: "Update the title of a specific task without modifying the 'completed' status.",
+          description: "Update the title of a specific task without modifying the completed status.",
           operationId: "updateTask",
           parameters: [
             {
